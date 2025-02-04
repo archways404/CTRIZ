@@ -1,0 +1,5 @@
+var int x = 5; 
+var float y = 10.5; 
+x = 3; 
+print(x); 
+print(y);
