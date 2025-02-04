@@ -1,0 +1,150 @@
+Control Flow Statements:
+
+  Control flow statements determine the execution flow of a program. The available control structures include:
+
+  1. Conditional Statements
+  2. Looping Statements
+  3. Pattern Matching (Optional)
+
+  ------------------------------------------
+  1. Conditional Statements:
+  ------------------------------------------
+
+  Conditional statements allow execution of code based on conditions.
+
+  **If-Else Statement:**
+
+    if (condition) {
+        // Code block executes if condition is true
+    }
+
+    Example:
+
+    var int x = 10;
+    if (x > 5) {
+        print("x is greater than 5");
+    }
+
+  **If-Else If-Else Statement:**
+
+    if (condition) {
+        // Code executes if condition is true
+    } else if (another condition) {
+        // Executes if first condition is false but second is true
+    } else {
+        // Executes if no condition is true
+    }
+
+    Example:
+
+    var int x = 10;
+    if (x > 10) {
+        print("x is greater than 10");
+    } else if (x == 10) {
+        print("x is exactly 10");
+    } else {
+        print("x is less than 10");
+    }
+
+  **Ternary Operator (Shorthand If-Else):**
+
+    Syntax:
+
+      var [type] [variable] = (condition) ? [value_if_true] : [value_if_false];
+
+    Example:
+
+      var str result = (x > 5) ? "Greater" : "Smaller";
+      print(result);
+
+  ------------------------------------------
+  2. Looping Statements:
+  ------------------------------------------
+
+  Loops execute code multiple times based on conditions.
+
+  **While Loop:**
+
+    while (condition) {
+        // Code executes while condition is true
+    }
+
+    Example:
+
+    var int i = 0;
+    while (i < 5) {
+        print(i);
+        i = i + 1;
+    }
+
+  **For Loop:**
+
+    for (var int i = 0; i < limit; i = i + 1) {
+        // Code executes for each iteration
+    }
+
+    Example:
+
+    for (var int i = 0; i < 5; i = i + 1) {
+        print(i);
+    }
+
+  **Break and Continue Statements:**
+
+    - `break`: Exits the loop immediately.
+    - `continue`: Skips the current iteration and continues with the next.
+
+    Example:
+
+    var int i = 0;
+    while (i < 10) {
+        i = i + 1;
+        if (i == 5) {
+            continue; // Skips printing 5
+        }
+        if (i == 8) {
+            break; // Stops loop when i reaches 8
+        }
+        print(i);
+    }
+
+  ------------------------------------------
+  3. Pattern Matching (Optional):
+  ------------------------------------------
+
+  Pattern matching is a more readable alternative to switch-case.
+
+  **Match Expression:**
+
+    match (expression) {
+        case value1: {
+            // Code block
+        }
+        case value2: {
+            // Code block
+        }
+        default: {
+            // Executes if no case matches
+        }
+    }
+
+    Example:
+
+    var int day = 3;
+    match (day) {
+        case 1: {
+            print("Monday");
+        }
+        case 2: {
+            print("Tuesday");
+        }
+        case 3: {
+            print("Wednesday");
+        }
+        default: {
+            print("Unknown day");
+        }
+    }
+
+------------------------------------------
+End of Control Flow Statements Guide
