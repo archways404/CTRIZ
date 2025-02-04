@@ -22,3 +22,15 @@ clang++ -std=c++17 -o compiler llvm_lexer.cpp llvm_ast.cpp llvm_compiler.cpp `ll
 llc output.ll -o output.s
 clang output.s -o my_program
 ./my_program
+
+
+
+
+
+
+
+clang++ -std=c++17 -o ctriz llvm_lexer.cpp llvm_ast.cpp llvm_compiler.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core` -fno-rtti
+
+chmod +x run_ctz.sh
+
+./run_ctz.sh example_code.ctz
