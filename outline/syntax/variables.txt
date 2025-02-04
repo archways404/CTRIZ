@@ -1,0 +1,101 @@
+
+VARIABLES:
+
+  When declaring variables you must use the "var" keyword followed by the type of variable you are declaring. Keep in mind that you can change the value of a variable at any time.
+
+  You can declare it with a value or without a value.
+
+  With a value:
+  
+    [var] [type] [variableName] = [value];
+  
+  Without an initial value:
+  
+    [var] [type] [variableName];
+
+    To then assign a value to the variable you can do so by using the "=" operator.
+
+    [variableName] = [value];
+
+CONSTANTS:
+
+  When declaring constants you must use the "const" keyword followed by the type of variable you are declaring. Keep in mind that you can not change a value of a "const" variable once it has been declared.
+
+  You can declare it with a value or without a value.
+
+  With a value:
+  
+    [var] [type] [variableName] = [value];
+  
+  Without an initial value:
+  
+    [var] [type] [variableName];
+
+    To then assign a value to the variable you can do so by using the "=" operator.
+
+    [variableName] = [value];
+
+
+INTEGER:
+
+  With initial value:
+
+    var int variableName = 5;
+  
+  Without initial value:
+
+    var int variableName;
+
+    variableName = 5;
+
+
+FLOAT:
+
+  With initial value:
+
+    var float variableName = 5.5;
+  
+  Without initial value:
+
+    var float variableName;
+
+    variableName = 5.5;
+
+
+BOOLEAN:
+
+  With initial value:
+
+    var bool variableName = true;
+  
+  Without initial value:
+
+    var bool variableName;
+
+    variableName = true;
+
+
+CHARACTER (string):
+
+  With initial value:
+
+    var char variableName = 'a';
+  
+  Without initial value:
+
+    var char variableName;
+
+    variableName = 'a';
+
+
+STRING:
+
+  With initial value:
+
+    var str variableName = 'a';
+  
+  Without initial value:
+
+    var str variableName;
+
+    variableName = 'a';

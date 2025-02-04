@@ -1,0 +1,28 @@
+POINTERS:
+
+To define a pointer:
+
+  var ptr int myPointer;
+
+    You can also define it with a null value by default:
+
+    var ptr int myPointer = null;
+
+To get the address of a value (pointer):
+
+  var int value = 10;
+  
+  var ptr int myPointer = &value; // Get address of 'value'
+
+To get the value at a pointer:
+
+  var int dereferencedValue = *myPointer; // Get value at pointer
+
+
+
+To allocate memory for a pointer:
+
+  var ptr int myPointer = alloc(4); // Allocate space for an int
+  *myPointer = 42; // Store value in allocated memory
+
+  free(myPointer);

@@ -1,0 +1,180 @@
+Function Guidelines:
+
+  Function Declaration:
+
+    A function is declared using the Fn keyword, followed by:
+    - A function name.
+    - A parameter list (can be empty).
+    - A return type (optional if void).
+    - A function body enclosed in {}.
+
+  Syntax:
+
+    Fn [function_name] ([params]) [return_type] {
+      // Function body
+    }
+
+  Example:
+
+    Fn greet() void {
+      print("Hello, World!");
+    }
+
+    greet(); // Output: Hello, World!
+  
+  Function Parameters:
+
+    Functions can take zero or more parameters. Each parameter must have a type.
+
+    Syntax:
+
+      Fn function_name (type param1, type param2, ...) return_type {
+        // Function body
+      }
+
+    Example:
+
+      Fn add(int a, int b) int {
+        return a + b;
+      }
+
+    Usage:
+
+      var int result = add(5, 10);
+      print(result); // Output: 15
+
+  Return Types:
+
+  A function must specify a return type unless it returns void.
+
+Example (Returning a Value):
+
+  Fn multiply(int x, int y) int {
+    return x * y;
+  }
+
+Example (No Return Value - void):
+
+  Fn logMessage() void {
+    print("This is a log message.");
+  }
+
+
+  Default Parameter Values:
+
+  A function can have default values for parameters.
+
+Example:
+
+  Fn greet(str name = "User") void {
+    print("Hello, " + name + "!");
+  }
+
+  greet();        // Output: Hello, User!
+  greet("John");  // Output: Hello, John!
+
+
+  Passing by Value vs. Reference (Pointers):
+
+  By default, parameters are passed by value.
+To pass by reference, use pointers:
+
+Example:
+
+  Fn increment(ptr int num) void {
+    *num = *num + 1;
+  }
+
+  var int value = 10;
+  increment(&value);
+  print(value); // Output: 11
+
+  Recursion:
+
+  A function can call itself.
+
+Example:
+
+  Fn factorial(int n) int {
+    if n == 0 { return 1; }
+    return n * factorial(n - 1);
+  }
+
+  print(factorial(5)); // Output: 120
+
+
+  Function Pointers:
+
+  Functions can be assigned to variables.
+
+Example:
+
+  Fn multiply(int x, int y) int {
+    return x * y;
+  }
+
+  var Fn(int, int) -> int operation = multiply;
+  print(operation(4, 3)); // Output: 12
+
+
+  Anonymous Functions (Lambdas):
+
+  Functions can be assigned inline.
+
+Example:
+
+  var Fn(int) -> int square = (x) -> x * x;
+  print(square(4)); // Output: 16
+
+  Multiple Return Values:
+
+  Functions can return more than one value using tuples.
+
+Example:
+
+  Fn divide(int a, int b) -> (int, int) {
+    return (a / b, a % b);
+  }
+
+Usage:
+
+  var int quotient, remainder = divide(10, 3);
+  print(quotient);   // Output: 3
+  print(remainder);  // Output: 1
+
+  Error Handling in Functions:
+
+  Functions can return errors instead of panicking.
+
+Example:
+
+  Fn safe_divide(int a, int b) -> int? {
+    if b == 0 { return error("Cannot divide by zero"); }
+    return a / b;
+  }
+
+  Overloading Functions:
+
+  A function may have multiple definitions with different parameters.
+
+Example:
+
+  Fn printValue(int x) void {
+    print("Integer: " + x);
+  }
+
+  Fn printValue(str x) void {
+    print("String: " + x);
+  }
+
+  Inline Functions:
+
+  Functions marked inline are expanded at compile time.
+
+Example:
+
+  inline Fn fast_add(int a, int b) int {
+    return a + b;
+  }
+
+  
